@@ -23,3 +23,6 @@ Things you may want to cover:
 
 * ...
 # Backend-Rails-API
+
+Rails APIを使ったバックエンド  
+font-view link: https://github.com/uugo-yuji/Front-to-Vue-Nuxt
