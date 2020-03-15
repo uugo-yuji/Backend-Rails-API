@@ -33,5 +33,18 @@ module BackendRails
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # CORSの設定　Gem 'rack-cors'導入
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        # 許可するドメイン
+        origins "localhost:3000"
+        # 許可するヘッダとメソッドの種類
+        resource "*",
+          headers: :any,
+          methods: [:get, :post, :patch, :delete, :head, :options]
+      end
+    end
+
   end
 end
