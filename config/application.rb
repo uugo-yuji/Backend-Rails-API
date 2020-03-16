@@ -38,7 +38,7 @@ module BackendRails
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         # 許可するドメイン
-        origins "localhost:3000"
+        origins "*"
         # 許可するヘッダとメソッドの種類
         resource "*",
           headers: :any,
