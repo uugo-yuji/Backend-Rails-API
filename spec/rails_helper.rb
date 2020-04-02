@@ -62,4 +62,8 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   # FactoryBotメソッドを使用する為に/FactoryBotの記述が省略できる。
   config.include FactoryBot::Syntax::Methods
+  # sign_inヘルパーを提供
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  # FactoryBotもinclude
+  config.include FactoryBot::Syntax::Methods
 end
